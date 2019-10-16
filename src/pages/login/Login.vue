@@ -69,7 +69,7 @@
                             this.$store.dispatch("setUser",decoded)
 
                             /*跳转*/
-                            this.$router.push('/index');
+                            this.$router.push('/index/welcome');
                         })
                     }
                 })

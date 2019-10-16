@@ -15,7 +15,18 @@ const router = new Router({
     }, {
       path: '/index',
       name: 'index',
-      component: Index
+      component: Index,
+      children:[
+        {
+          path: 'home',
+          name: 'name',
+          component: ()=>import('../pages/Index')
+        },{
+          path: 'welcome',
+          name: 'welcome',
+          component: ()=>import('../pages/Welcome')
+        }
+      ]
     },{
       path: '/register',
       name: 'register',
